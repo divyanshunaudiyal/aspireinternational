@@ -1,0 +1,105 @@
+section.about {
+  .about-container {
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+      color: white;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-color: #226cf5;
+        border-radius: 0 0 50% 50%/0 0 100% 100%;
+        transform: scaleX(2);
+        z-index: -1;
+      }
+
+      h1 {
+        font-size: 42px;
+        margin-bottom: 29px;
+        padding: 0 104px;
+        box-sizing: border-box;
+        animation: scrollUp 1s;
+      }
+      p {
+        margin-bottom: 35px;
+        font-size: 22px;
+        animation: scrollUp 1s;
+      }
+    }
+
+    .university-container {
+      width: 90%;
+      margin: 10% auto 0 auto;
+
+      h1 {
+        font-size: 42px;
+        font-weight: 600;
+        margin-bottom: 60px;
+      }
+      & .university {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        padding: 10px 30px;
+        margin: 15px;
+        border-radius: 10px;
+        font-weight: 400;
+        line-height: 20px;
+
+        &:hover {
+          box-shadow: 1px 1px 10px rgb(195, 195, 195);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section.about {
+    .about-container {
+      .text {
+        // width: 100%;
+        &::before {
+          height: 100%;
+          border-radius: 0 0 70% 60%/0 0 70% 70%;
+        }
+
+        h1 {
+          font-size: 26px;
+          margin-bottom: 29px;
+          padding: 10px 10px;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        p {
+          margin-bottom: 35px;
+          font-size: 16px;
+        }
+      }
+
+      .university-container {
+        h1 {
+          text-align: left;
+          margin-top: 4rem;
+          font-size: 18px;
+          width: 90%;
+          margin: 4rem auto 0 auto;
+        }
+        .university {
+          //   width: 100%;
+        }
+      }
+    }
+  }
+}

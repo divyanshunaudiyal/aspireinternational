@@ -1,0 +1,112 @@
+section.home {
+  width: 100vw;
+  overflow: hidden;
+  position: relative; // Add position: relative to establish a positioning context
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #226cf5;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(2.1);
+    z-index: -1;
+  }
+
+  &::after {
+    background: url("../../public/new-palace.png");
+    background-repeat: no-repeat;
+    background-position: 210px 0;
+
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 120px;
+    top: 20px;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  .home-container {
+    display: flex;
+    // grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-around;
+
+    .text {
+      width: 40%;
+      animation: scrollUp 1s;
+      h1 {
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 54.6px;
+      }
+      p {
+        font-family: "Bueno-light";
+        font-size: 22px;
+        // font-weight: 300;
+        line-height: 30.8px;
+        margin-bottom: 40px;
+      }
+      button {
+        background: linear-gradient(263.28deg, #ff6a56 1.1%, #fdaf4d 141.83%);
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 19.2px;
+        padding: 13px 30px;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+    .image {
+      width: 40%;
+      img {
+        width: 90%;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section.home {
+    padding: 1rem 0;
+    &::before {
+      border-radius: 0 0 50% 50%/0 0 50% 50%;
+      // transform: scale(2.4);
+    }
+    &::after {
+      display: none;
+    }
+    .home-container {
+      // flex-direction: column;
+      .text {
+        h1 {
+          font-size: 26px;
+          line-height: 33px;
+          margin-bottom: 30px;
+          margin-top: 20px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 30px;
+        }
+        button {
+          margin-bottom: 2rem;
+        }
+      }
+      & > div {
+        // width: 90% !important;
+      }
+    }
+  }
+}

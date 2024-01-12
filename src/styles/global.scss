@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Buenos";
+  src: url("../../public/Buenos-font/BuenosAires-Regular.ttf");
+}
+@font-face {
+  font-family: "Buenos-bold";
+  src: url("../../public/Buenos-font/BuenosAires-Bold.ttf");
+}
+@font-face {
+  font-family: "Bueno-light";
+  src: url("../../public/Buenos-font/BuenosAires-Light.ttf");
+}
+
+body {
+  font-family: "Buenos";
+}
+section {
+  margin: 5% 0;
+  width: 100vw;
+  overflow: hidden;
+  // setting margin for every section so that navbar doesn't overlaps it since it's positioned absolute
+}
+.hidden {
+  opacity: 0;
+  display: none;
+}
+.show {
+  opacity: 1;
+  display: block;
+}
+.fadeIn {
+  animation: fadeIn 2s;
+}
+.slideToTop {
+  animation: scrollUp 1s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+button,
+a {
+  cursor: pointer;
+}
+
+@keyframes scrollUp {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
